@@ -1,0 +1,25 @@
+CREATE TABLE register
+(
+ID MEDIUMINT NOT NULL AUTO_INCREMENT,
+Username varchar(30) NOT NULL,
+Email varchar(50) NOT NULL,
+Password varchar(20) NOT NULL,
+PRIMARY KEY (ID)
+);
+
+CREATE TABLE contacts
+(
+ID MEDIUMINT NOT NULL AUTO_INCREMENT,
+Username varchar(30) NOT NULL,
+FriendName varchar(30) NOT NULL,
+PRIMARY KEY (ID)
+);
+
+CREATE TABLE message
+(
+ID MEDIUMINT NOT NULL AUTO_INCREMENT,
+chatmessage varchar(500) NOT NULL,
+fromuser varchar(30) NOT NULL,
+touser varchar(30) NOT NULL,
+PRIMARY KEY (ID)
+);

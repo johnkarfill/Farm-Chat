@@ -72,7 +72,7 @@ else{e.value="no";location.reload();}
 
             } catch (Exception e1) {
             }
-             out.println("CURRENT MESSAGES");
+             out.println("<br/><br/> CURRENT MESSAGES<br/>");
             try {
 
                 Class.forName("com.mysql.jdbc.Driver");
@@ -87,7 +87,7 @@ else{e.value="no";location.reload();}
                      String msg = rs.getString(1);
 
                     
-                    out.println("FROM:"+from +"  MESSAGE :"+msg+" ");
+                    out.println("<br/>FROM:"+from +"  MESSAGE :"+msg+" ");
                     out.println("<BR>");
                 }
 
@@ -106,8 +106,8 @@ else{e.value="no";location.reload();}
                         <div class="form-body">
                             <h1 class="form-title text-center">SEND MESSAGE</h1>
                             <div class="form-group">
-                                <input class="form-control" type="text" id="friendname" name="friendname" placeholder="Username of contact">
-                                  <input class="form-control" type="text" id="msg" name="msg" placeholder="message">
+                                <input class="form-control" type="text" id="friendname" name="friendname" placeholder="Username of Contact">
+                                  <input class="form-control" type="text" id="msg" name="msg" placeholder="Message">
 
                             
                             
@@ -119,7 +119,7 @@ else{e.value="no";location.reload();}
                                                  <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Home.jsp">Back</button>
 
                                 
-                                <button class="btn btn-default btn-lg text-right" style="margin-left: 150px" type="submit">confirm</button>
+                                <button class="btn btn-default btn-lg text-right" style="margin-left: 146px" type="submit">Confirm</button>
                             </div>
                         </div>
                     </fieldset>

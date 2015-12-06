@@ -10,12 +10,12 @@
      String username = (String)session.getAttribute("LoginUsername");
      String friendname = request.getParameter("friendname");
          String msg = request.getParameter("msg");
-out.println("YOU ARE "+username+" AND SEND '"+msg+"' to "+friendname);
+out.println("Sender: "+username+" <br/>Message: '"+msg+"'<br/>TO: "+friendname);
+
 try {
     String connectionURL = "jdbc:mysql://localhost:3306/register";
     Connection connection = null; 
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 
-    out.println("YOUR NAME IS " + username);
     connection = DriverManager.getConnection(connectionURL, "root", "");
     
     if(!connection.isClosed())
@@ -29,15 +29,14 @@ try {
 }
 %>
 <div class="main-form">
-       <form action="/Farm-Chat/view/Contacts.jsp" method="POST">
+    <br/>
+       <form action="/Farm-Chat/view/AddMsgUi.jsp" method="POST">
            <fieldset>
              
                <div class="form-body">
-      
-                   
-                  
+
                    <div class="form-group text-center">
-                       <button class="btn btn-default btn-lg text-right" type="submit">back</button>
+                       <button class="btn btn-default btn-lg text-right" type="submit">Back</button>
                        </div>
                </div>
            </fieldset>

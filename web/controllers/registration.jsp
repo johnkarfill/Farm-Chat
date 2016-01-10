@@ -1,7 +1,7 @@
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
 <html>  
-<head> 
+<head>  
 <title>Registered</title>
 </head> 
 <body background="images/chat2.jpg">

@@ -1,7 +1,7 @@
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
 
-<%
+<%  
      
      String username = (String)session.getAttribute("LoginUsername");
      String friendname = request.getParameter("friendname");

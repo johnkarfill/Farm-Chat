@@ -1,7 +1,7 @@
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
-<html>  
-<head> 
+<html>   
+<head>  
 <title>Registered</title>
 </head> 
 <body>
@@ -10,7 +10,7 @@
      String username = (String)session.getAttribute("LoginUsername");
      String friendname = request.getParameter("friendname");
     
-try {
+try { 
     String connectionURL = "jdbc:mysql://localhost:3306/register";
     Connection connection = null; 
     Class.forName("com.mysql.jdbc.Driver").newInstance(); 

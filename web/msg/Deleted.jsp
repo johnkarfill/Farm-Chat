@@ -3,7 +3,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
         <title>Account Deleted</title> 
     </head> 
-    <body>
+    <body background="/Farm-Chat/images/chat2.jpg">
 <%             
                 session.setAttribute("LoginStatus", 0); 
                 session.setAttribute("LoginFirstName", "");

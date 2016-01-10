@@ -28,7 +28,7 @@ try {
 }
 %>
 <div class="main-form">
-       <form action="/pat/view/Contacts.jsp" method="POST">
+       <form action="/Farm-Chat/view/Contacts.jsp" method="POST">
            <fieldset>
              
                <div class="form-body">

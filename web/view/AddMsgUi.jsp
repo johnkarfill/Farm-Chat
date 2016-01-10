@@ -14,8 +14,11 @@
         <style>
             .scrollable {
     height: 200px; /* or any value */
-    overflow-y: auto;
-    background-color: yellow;
+    overflow-y: scroll;
+    background-color:  white;
+    outline: 1px solid slategrey;
+    
+    
 }
             
             body{
@@ -43,7 +46,7 @@
             }
         </style>
     </head>
-    <body id="bod">
+    <body id="bod" background="/Farm-Chat/images/chat2.jpg">>
         
         
         
@@ -60,7 +63,7 @@ var request;
 function sendInfo()  
 {  
 
-var url="/pat/controllers/getchatmsgs.jsp"
+var url="/Farm-Chat/controllers/getchatmsgs.jsp"
   
 if(window.XMLHttpRequest){  
 request=new XMLHttpRequest();  
@@ -115,32 +118,30 @@ var val=request2.responseText;
 
 setInterval(sendInfo,1000);
 
-
+function scrollToBottom() {
+   var scrollBottom = Math.max($('#Table0').height() - $('#myDiv').height() + 20, 0);
+   $('#myDiv').scrollTop(scrollBottom);
+}
+$(document).ready( scrollToBottom );
 
 </script>
- <span class="form-logo glyphicon glyphicon-user"></span>
-<marquee><h1>This is an example of ajax</h1></marquee>  
-                    
                          
-  <div id ="amit2" class='scrollable'>
+  <div id ="amit2" class='scrollable' style="width:1350px;height:300px;">
+      
     <!-- Your table -->
 </div>
 <section id="amitd2">  </section>  
 
   <form onsubmit="sendInfo2();" >
-                   
-                       
-                            <h1 ">SEND MESSAGE</h1>
-                            
 
-                                <input class="form-control" type="text" id="friendname" name="friendname" placeholder="Username of contact">
-                                  <input class="form-control" type="text" id="msg" name="msg" placeholder="message">
+<br/><br/>
+                              <input class="form-control" type="text" id="msg" name="msg" placeholder="Type your message here:">
 
                             
                             
 
-                                
-                                <button class="btn btn-default btn-lg text-right" style="margin-left: 150px" type="submit" >confirm</button>
+                                <br/>
+                                <button class="btn btn-default btn-lg text-right" type="submit" >Send</button>
                       
                 
                 </form>
@@ -156,52 +157,9 @@ setInterval(sendInfo,1000);
         }
         %>
         
-<%    
-            String connectionURL = "jdbc:mysql://localhost:3306/register";
-    
-            try {
 
-                Class.forName("com.mysql.jdbc.Driver");
-                Connection con = DriverManager.getConnection(connectionURL, "root", "");
-                Statement st = con.createStatement();
-                String cuser = (String)session.getAttribute("LoginUsername");
-                ResultSet rs = st.executeQuery("SELECT FriendName FROM contacts WHERE Username='" + cuser + "'");
-
-                while (rs.next()) {
-
-                    String friend = rs.getString(1);
-                    out.println(friend+"  ");
-                    out.println("");
-                }
-
-            } catch (Exception e1) {
-            }
-           
-            try {
-
-                Class.forName("com.mysql.jdbc.Driver");
-                Connection con = DriverManager.getConnection(connectionURL, "root", "");
-                Statement st = con.createStatement();
-                String cuser = (String)session.getAttribute("LoginUsername");
-                ResultSet rs = st.executeQuery("SELECT chatmessage,fromuser,touser FROM message WHERE touser='" + cuser + "'");
-
-                while (rs.next()) {
-
-                    String from = rs.getString(2);
-                     String msg = rs.getString(1);
-
-                    
-                //    out.println("FROM:"+from +"  MESSAGE :"+msg+" ");
-             //       out.println("<BR>");
-                }
-
-            } catch (Exception e1) {
-            }
-
-
-        %>
-       
-                                                 <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/pat/view/Home.jsp">Back</button>
+        <br/><br/><br/><br/><br/><br/><br/><br/>    
+    <center><button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Home.jsp">Back</button></center>
 
                             
         

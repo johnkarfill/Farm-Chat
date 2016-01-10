@@ -11,11 +11,12 @@
 try{  
 Class.forName("com.mysql.jdbc.Driver");  
 Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/register","root","");  
-PreparedStatement ps=con.prepareStatement("SELECT chatmessage,fromuser,touser FROM message WHERE touser='" + cuser+"'");  
+PreparedStatement ps=con.prepareStatement("SELECT chatmessage,fromuser FROM message");  
 //ps.setInt(1,id);  
+
 ResultSet rs=ps.executeQuery();  
 while(rs.next()){  
-out.print("<h2><BR>  --> "+rs.getString(2)+"<B></h2> ::: <h3><I>"+rs.getString(1)+"</i></h3>");  
+out.print("<h3><b> "+rs.getString(2)+"</b>:"+" "+rs.getString(1)+"</h3><br>");  
 }  
 con.close();  
 }catch(Exception e){e.printStackTrace();}  

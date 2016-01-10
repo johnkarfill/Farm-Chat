@@ -35,14 +35,14 @@
                                  session.setAttribute("LoginPassword", password);
                                  session.setAttribute("LoginUsername", username);
                                   
-                                 response.sendRedirect("/pat/view/Home.jsp");
+                                 response.sendRedirect("/Farm-Chat/view/Home.jsp");
                              }
                              else {
                                  
-                               response.sendRedirect("/pat/msg/Error.jsp");
+                               response.sendRedirect("/Farm-Chat/msg/Error.jsp");
                                      }
                              }
-                         response.sendRedirect("/pat/msg/Error.jsp");
+                         response.sendRedirect("/Farm-Chat/msg/Error.jsp");
                     }catch(Exception e1){} 
  %>
     </body> 

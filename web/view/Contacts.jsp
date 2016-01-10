@@ -3,7 +3,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
         <title>Contacts</title> 
     </head>   
-    <body>
+    <body background="/Farm-Chat/images/chat2.jpg">
         
 <input type="hidden" id="refreshed" value="no">
 <script type="text/javascript">
@@ -15,13 +15,13 @@ else{e.value="no";location.reload();}
 </script>
 
         <% if (session.getAttribute("LoginStatus").equals(0)) { 
-        response.sendRedirect("/pat/msg/Error_Logout.jsp");
+        response.sendRedirect("/Farm-Chat/msg/Error_Logout.jsp");
         }
         %>
         
         <div id="wrapper">
             <div class="main-form">
-                <form action="/pat/view/ShowContactUI.jsp" method="POST">
+                <form action="/Farm-Chat/view/ShowContactUI.jsp" method="POST">
                     <fieldset>
                         <div class="text-center">
                             <span class="form-logo glyphicon glyphicon-user"></span>
@@ -39,7 +39,7 @@ else{e.value="no";location.reload();}
             </div>
         <div id="wrapper">
             <div class="main-form">
-                <form action="/pat/view/AddContactUI.jsp" method="POST">
+                <form action="/Farm-Chat/view/AddContactUI.jsp" method="POST">
                     <fieldset>
                         <div class="text-center">
                             <span class="form-logo glyphicon glyphicon-user"></span>
@@ -57,7 +57,7 @@ else{e.value="no";location.reload();}
             </div>
             <div id="wrapper">
                 <div class="main-form">
-                    <form action="/pat/view/RemoveContactUI.jsp" method="POST">
+                    <form action="/Farm-Chat/view/RemoveContactUI.jsp" method="POST">
                         <fieldset>
                             <div class="text-center">
                                 <span class="form-logo glyphicon glyphicon-user"></span>
@@ -72,7 +72,7 @@ else{e.value="no";location.reload();}
                             </div>
                         </fieldset>
                     </form>
-                    <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/pat/view/Home.jsp">Back</button>
+                    <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Home.jsp">Back</button>
                 </div>  
             </div>
         </div>

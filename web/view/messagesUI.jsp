@@ -54,19 +54,20 @@ else{e.value="no";location.reload();}
         
 <%    
             String connectionURL = "jdbc:mysql://localhost:3306/register";
-            out.println("<h3><b>CURRENT CONTACTS:</b></h3><br>");
+            out.println("<h3><b>CURRENT MESSAGES:</b></h3><br>");
             try {
 
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection(connectionURL, "root", "");
                 Statement st = con.createStatement();
                 String cuser = (String)session.getAttribute("LoginUsername");
-                ResultSet rs = st.executeQuery("SELECT FriendName FROM contacts WHERE Username='" + cuser + "'");
+                ResultSet rs = st.executeQuery("SELECT chatmessage,fromuser FROM pm WHERE touser='" + cuser + "'");
 
                 while (rs.next()) {
 
-                    String friend = rs.getString(1);
-                    out.println("<b>CONTACT: </b>" + friend);
+                    String message = rs.getString(1);
+                    String from = rs.getString(2);
+                    out.println("<h3>"+from+": " + message+"</h3>");
                     out.println("");
                 }
 
@@ -76,7 +77,8 @@ else{e.value="no";location.reload();}
         
 
              <div class="form-group text-center">
-                 <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Contacts.jsp">Back</button>
+                 <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/pmMessageUI.jsp">New Message</button>
+                 <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Home.jsp">Back</button>
              </div>
  
     </body>

@@ -4,7 +4,7 @@
 <head> 
 <title>Registered</title>
 </head> 
-<body>
+<body background="images/chat2.jpg">
 <%
      String username = request.getParameter("username");
      String email = request.getParameter("email");
@@ -18,11 +18,11 @@ try {
     connection = DriverManager.getConnection(connectionURL, "root", "");
     
      if(username.equals("") || email.equals("") || password.equals("") || pass2.equals("")){
-                response.sendRedirect("/pat/msg/Error_NoData.jsp");
+                response.sendRedirect("/Farm-Chat/msg/Error_NoData.jsp");
                 connection.close();
                 }
      if(password.equals(password) != pass2.equals(password)){
-                response.sendRedirect("/pat/msg/Error_Pass.jsp");
+                response.sendRedirect("/Farm-Chat/msg/Error_Pass.jsp");
                 connection.close();
                 }
     
@@ -38,6 +38,6 @@ try {
 %>
 <h1>Account Created</h1>
 
-        <button style="height:25px; width:130px"class="btn btn-default btn-lg text-left" type="button" onclick=window.location.href="/pat/index.html">Back</button>
+        <button style="height:25px; width:130px"class="btn btn-default btn-lg text-left" type="button" onclick=window.location.href="/Farm-Chat/index.html">Back</button>
 </body> 
 </html> 

@@ -33,7 +33,7 @@
        }
    </style>
 </head>
-<body>
+    <body background="/Farm-Chat/images/chat2.jpg">
 <input type="hidden" id="refreshed" value="no">
 <script type="text/javascript">
 onload=function(){
@@ -48,7 +48,7 @@ else{e.value="no";location.reload();}
         %>
 <div id="wrapper">
    <div class="main-form">
-       <form action="/pat/controllers/Remove_Account.jsp" method="POST">
+       <form action="/Farm-Chat/controllers/Remove_Account.jsp" method="POST">
            <fieldset>
                <div class="text-center">
                    <span class="form-logo glyphicon glyphicon-user"></span>
@@ -65,7 +65,7 @@ else{e.value="no";location.reload();}
                        <input class="form-control" type="password" id="password" name="password2" placeholder="Re-enter Password">
                    </div>
                    <div class="form-group text-center">
-                       <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/pat/view/Settings.jsp">Back</button>
+                       <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Settings.jsp">Back</button>
                        <button class="btn btn-default btn-lg" style="margin-left: 86px" type="submit">Delete Account</button>
                        </div>
                </div>

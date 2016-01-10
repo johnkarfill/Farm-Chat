@@ -4,8 +4,8 @@
         <title>Error</title> 
     </head> 
     <body background="/Farm-Chat/images/chat2.jpg">
-        <h1>Incorrect Email or Password</h1>
+        <h1>This username is already taken</h1>
         
-        <a href="/Farm-Chat/index.html"><b>Back</b></a>
+        <a href="/Farm-Chat/view/register.jsp"><b>Back</b></a>
     </body> 
 </html> 

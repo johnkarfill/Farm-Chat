@@ -37,7 +37,7 @@
             }
         </style>
     </head>
-    <body>
+    <body background="/Farm-Chat/images/chat2.jpg">
 <input type="hidden" id="refreshed" value="no">
 <script type="text/javascript">
 onload=function(){
@@ -75,7 +75,7 @@ else{e.value="no";location.reload();}
         %>
         <div id="wrapper">
             <div class="main-form">
-                <form action="/pat/controllers/AddContact.jsp" method="POST">
+                <form action="/Farm-Chat/controllers/AddContact.jsp" method="POST">
                     <fieldset>
                         <div class="text-center">
                             <span class="form-logo glyphicon glyphicon-user"></span>
@@ -88,7 +88,7 @@ else{e.value="no";location.reload();}
 
 
                             <div class="form-group text-center">
-                                 <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/pat/view/Contacts.jsp">Back</button>
+                                 <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Contacts.jsp">Back</button>
                                 <button class="btn btn-default btn-lg text-right" style="margin-left: 150px" type="submit">confirm</button>
                             </div>
                         </div>

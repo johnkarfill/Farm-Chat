@@ -37,7 +37,7 @@
        }
    </style>
 </head>
-<body>
+    <body background="/Farm-Chat/images/chat2.jpg">
 <input type="hidden" id="refreshed" value="no">
 <script type="text/javascript">
 onload=function(){
@@ -48,7 +48,7 @@ else{e.value="no";location.reload();}
 </script>
 
         <% if (session.getAttribute("LoginStatus").equals(0)) { 
-        response.sendRedirect("/pat/msg/Error_Logout.jsp");
+        response.sendRedirect("/Farm-Chat/msg/Error_Logout.jsp");
         }
         %>
  <%
@@ -89,7 +89,7 @@ else{e.value="no";location.reload();}
                   
                   
                    <div class="form-group text-center">
-                       <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/pat/view/Contacts.jsp">Back</button>
+                       <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Contacts.jsp">Back</button>
                        <button class="btn btn-default btn-lg text-right" style="margin-left: 150px" type="submit" >confirm</button>
                        </div>
                </div>

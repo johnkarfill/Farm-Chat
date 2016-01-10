@@ -23,20 +23,22 @@ else{e.value="no";location.reload();}
     <center><h1><%= session.getAttribute("LoginUsername") %></h1></center>
       
     <br/><br/><br/><br/><br/><br/><br/>
-    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/pat/view/AddMsgUi.jsp"'>Chat</button>
+    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/Farm-Chat/view/AddMsgUi.jsp"'>Chat</button>
     <br/><br/>
-    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/pat/view/uicam.jsp"'>send Photo</button> 
+    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/Farm-Chat/view/messagesUI.jsp"'>Messages</button>
+    <br/><br/>
+    <button style="margin-left: 130px; height:35px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/Farm-Chat/view/uicam.jsp"'>Send Photo</button> 
      <br/><br/>
-    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/pat/view/displayblob.jsp"'>get Photo</button>  
+    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/Farm-Chat/view/showblob.jsp"'>Get Photo</button>  
     
     <br/><br/>
-    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/pat/view/Contacts.jsp"'>Contacts</button> 
+    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/Farm-Chat/view/Contacts.jsp"'>Contacts</button> 
         <br/><br/>
-    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/pat/view/Settings.jsp"'>Settings</button> 
+    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/Farm-Chat/view/Settings.jsp"'>Settings</button> 
     <br/><br/>
-    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/pat/view/About.jsp"'>About</button>    
+    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/Farm-Chat/view/About.jsp"'>About</button>    
     <br/> <br/> <br/><br/><br/><br/><br/> 
-    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/pat/msg/Logout.jsp"'
+    <button style="margin-left: 130px; height:25px; width:80px"class="btn btn-default btn-lg text-left" type="button" onclick='window.location.href="/Farm-Chat/msg/Logout.jsp"'
     >Logout</button>
 </body> 
 </html> 

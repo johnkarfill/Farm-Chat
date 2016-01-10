@@ -2,7 +2,7 @@
 <html> 
 <head>
    <meta charset="utf-8" />
-   <title>Register</title>
+   <title>Change Email</title>
    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -33,21 +33,31 @@
        }
    </style>
 </head>
-<body background="/Farm-Chat/images/chat2.jpg">
+    <body background="/Farm-Chat/images/chat2.jpg">
+<input type="hidden" id="refreshed" value="no">
+<script type="text/javascript">
+onload=function(){
+var e=document.getElementById("refreshed");
+if(e.value=="no")e.value="yes";
+else{e.value="no";location.reload();}
+}
+</script>
+        <% if (session.getAttribute("LoginStatus").equals(0)) { 
+            response.sendRedirect("/Farm-Chat/msg/Error_Logout.jsp");
+        }
+        %>
+        
 <div id="wrapper">
    <div class="main-form">
-       <form action="/Farm-Chat/controllers/registration.jsp" method="POST">
+       <form action="/Farm-Chat/controllers/ChangeEmail.jsp" method="POST">
            <fieldset>
                <div class="text-center">
                    <span class="form-logo glyphicon glyphicon-user"></span>
                </div>
                <div class="form-body">
-                   <h1 class="form-title text-center">New Account</h1>
+                   <h1 class="form-title text-center">Change Email</h1>
                    <div class="form-group">
-                       <input class="form-control" type="text" id="firstname" name="username" placeholder="Username">
-                   </div>
-                   <div class="form-group">
-                       <input class="form-control" type="email" id="email" name="email" placeholder="Email">
+                       <input class="form-control" type="email" id="email" name="newemail" placeholder="New Email">
                    </div>
                    <div class="form-group">
                        <input class="form-control" type="password" id="password" name="password" placeholder="Password">
@@ -56,8 +66,8 @@
                        <input class="form-control" type="password" id="password" name="password2" placeholder="Re-enter Password">
                    </div>
                    <div class="form-group text-center">
-                       <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/index.html">Back</button>
-                       <button class="btn btn-default btn-lg" style="margin-left: 103px" type="submit">New Account</button>
+                       <button class="btn btn-default btn-lg text-right" type="button" onclick=window.location.href="/Farm-Chat/view/Settings.jsp">Back</button>
+                       <button class="btn btn-default btn-lg" style="margin-left: 96px" type="submit">Change Email</button>
                        </div>
                </div>
            </fieldset>
@@ -65,4 +75,4 @@
    </div>
 </div>
 </body>
-</html> 
+</html>

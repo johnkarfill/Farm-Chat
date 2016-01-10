@@ -1,7 +1,6 @@
 <%
     
          String username = (String)session.getAttribute("LoginUsername");
-
     %>
 <!DOCTYPE html>
 <html>  
@@ -19,20 +18,19 @@
 <style>
 #container { 
     margin: 100px auto;
-    width: 200px;
-    height: 175px;
+    width: 380px;
+    height: 280px;
     border: 10px #333 solid;
 }
 #video {
-    width: 200px;
-    height: 175px;
+    width: 350px;
+    height: 250px;
     background-color: #666;
 }
-
 #container2 {
-    margin: 100px auto;
-    width: 200px;
-    height: 175px;
+    margin: 28px auto;
+    width: 380px;
+    height: 280px;
     border: 10px #333 solid;
 }
 #canvas {
@@ -40,13 +38,10 @@
     height: 175px;
     background-color: #666;
 }
-
-
 .wrapper {
     text-align: center;
     
 }
-
 body {
 	    background-color:#555557;
 	    padding:0;
@@ -110,32 +105,31 @@ body {
 	    width:100px;
 	    margin:0 0 0 10px;
 	}
-
 </style>
 </head>
   
 <body>
     <div style="width:900px;height:800px; align-content: center;">
     
-        <div style="width:500px;height:400px">
+        <div style="width:800px;height:400px">
     
     <div id="container">
-        <video id="video"></video>
+        <video id="video"style="width:350px;height:250px;"></video>
     </div>
     
-    <div class="wrapper">
-    <button id="startbutton">chatPat!</button>
+    <div class="wrapper" style="width:100px;height:70px; align-content: center;" >
+    <button id="startbutton">ChatPat!</button>
     <button id="deletebutton"> <a href="">Delete</a></button>
     <div id="btn-download"> <a href="#" class="button" id="btn-download"></a></div>
     </div>
     
-    <div id="container2">
-        <canvas id="canvas"></canvas>
+    <div id="container2" >
+        <canvas id="canvas" style="width:350px;height:250px;"></canvas>
     </div>
     
         </div>
     
-    <div style="width:400px;height:200px;;">
+    <div style="width:800px;height:200px;;">
     <a style="color:red;" id="download">Download as image</a>
     
   
@@ -146,23 +140,27 @@ body {
             <table border="0">
                 <tr>
                     <td>SEND TO  </td>
-                <input type="hidden" name="firstname" value="<% out.print(username);%>" />
-                    <td><input type="text" name="lastName" size="50"/></td>
+                <input type="hidden" name="firstname"  value="<% out.print(username);%>" />
+                    <td><input type="text" name="lastName" size="50" style="width:150px;height:35px;"/></td>
                 </tr>
                
                 <tr>
                     <td>Photo: </td>
-                    <td><input type="file" name="photo" size="250"/></td>
+                    <td><input type="file" name="photo" size="250" style="width:150px;height:35px;"/></td>
                 </tr>
                 <tr>
                     <td colspan="2">
                         <input type="submit" width="200" value="Send">
+                        
                     </td>
                 </tr>
             </table>
+                    
         </form>
     
     
+                    <br/>
+                    <button style="margin-left: 10px; height:40px; width:90px"class="btn btn-default btn-lg text-left" type="button" onclick=window.location.href="/Farm-Chat/view/Home.jsp">Back</button>
     
     </div>
     </div>
@@ -193,7 +191,6 @@ body {
 */
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
-
 /**
  * Demonstrates how to download a canvas an image with a single
  * direct click on a link.
@@ -208,7 +205,6 @@ function doCanvas() {
     ctx.font = '26px sans-serif';
     ctx.fillText('Click link below to save this as image', 15, canvas.height / 2 + 35);
 }
-
 /**
  * This is the function that will take care of image extracting and
  * setting proper filename for the download.
@@ -218,15 +214,13 @@ function downloadCanvas(link, canvasId, filename) {
     link.href = document.getElementById(canvasId).toDataURL();
     link.download = filename;
 }
-
 /** 
  * The event handler for the link's onclick event. We give THIS as a
  * parameter (=the link element), ID of the canvas and a filename.
 */
 document.getElementById('download').addEventListener('click', function() {
-    downloadCanvas(this, 'canvas', 'test.png');
+    downloadCanvas(this, 'canvas', 'photo.png');
 }, false);
-
 /**
  * Draw something to canvas
  */
@@ -247,15 +241,13 @@ doCanvas();
  
     
 (function() {
-
   var streaming = false,
       video        = document.querySelector('#video'),
       canvas       = document.querySelector('#canvas'),
       photo        = document.querySelector('#photo'),
       startbutton  = document.querySelector('#startbutton'),
-      width = 120,
+      width = 350,
       height = 0;
-
 var button = document.getElementById('btn-download');
         button.addEventListener('click', function (e) {
             var dataURL = canvas.toDataURL('image/png');
@@ -265,7 +257,6 @@ var button = document.getElementById('btn-download');
                          navigator.webkitGetUserMedia ||
                          navigator.mozGetUserMedia ||
                          navigator.msGetUserMedia);
-
   navigator.getMedia(
     {
       video: true,
@@ -284,7 +275,6 @@ var button = document.getElementById('btn-download');
       console.log("An error occured! " + err);
     }
   );
-
   video.addEventListener('canplay', function(ev){
     if (!streaming) {
       height = video.videoHeight / (video.videoWidth/width);
@@ -295,7 +285,6 @@ var button = document.getElementById('btn-download');
       streaming = true;
     }
   }, false);
-
   function takepicture() {
     canvas.width = width;
     canvas.height = height;
@@ -304,24 +293,18 @@ var button = document.getElementById('btn-download');
     photo.setAttribute('src', data);
     
   }
-
   startbutton.addEventListener('click', function(ev){
       takepicture();
     ev.preventDefault();
   }, false);
-
 })();
-
 function sendInfo2()  
 {  
-
 alert("OK");
 var to=$("#friendname").val();
 var msg=$("#msg").val();
-
 alert(data);
 $("#icon").value=data;
-
 var url="/Farm-Chat/controllers/AddMsg.jsp?friendname="+to+"&msg="+msg+"&data=data";
   
 if(window.XMLHttpRequest){  
@@ -337,10 +320,6 @@ request.open("GET",url,true);
 request.send();  
 }catch(e){alert("Unable to connect to server");}  
 }  
-
-
-
-
 function getInfo2(){  
 if(request2.readyState==4){  
 var val=request2.responseText;  

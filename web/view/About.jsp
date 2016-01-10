@@ -29,11 +29,14 @@ else{e.value="no";location.reload();}
         
         <br/><br/><br/><br/>
         <h1><font color="white">This Web Created by: </font></h1>
-        <a href="https://www.facebook.com/n30r39" style="margin-left: 100px;">ΕΦΗ ΑΝΔΡΟΝΗ</a><br/><br/>
+        <a href="https://www.facebook.com/efi.androni" style="margin-left: 100px;">Έφη Ανδρονή</a><br/><br/>
+        <a href="https://www.facebook.com/JohnKarfill" style="margin-left: 100px;">Γιάννης Καραφύλλης</a><br/><br/>
+        <a href="https://www.facebook.com/karfills" style="margin-left: 100px;">Μάριος Καραφύλλης</a><br/><br/>
+        <a href="https://www.facebook.com/tsdragneel?fref=ts" style="margin-left: 100px;">Θοδωρής Σπαής</a><br/><br/>
         
         <br/><br/>
         <button style="margin-left: 100px; height:25px; width:130px"class="btn btn-default btn-lg text-left" type="button" onclick=window.location.href="http://www.emailmeform.com/builder/form/qAN4tO1bg75arazfCDW">Contact Form</button>
         <br/><br/>
-        <button style="margin-left: 100px; height:25px; width:130px"class="btn btn-default btn-lg text-left" type="button" onclick=window.location.href="/pat/view/Home.jsp">Back</button>
+        <button style="margin-left: 100px; height:25px; width:130px"class="btn btn-default btn-lg text-left" type="button" onclick=window.location.href="/Farm-Chat/view/Home.jsp">Back</button>
     </body>
 </html> 
